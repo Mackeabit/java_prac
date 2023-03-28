@@ -11,7 +11,7 @@ public class SlicePizza3 {
 
     public static void main(String[] args) {
 
-        int solution = solution(2, 4);
+        int solution = solution(7,10);
         System.out.println("solution = " + solution);
 
     }
@@ -19,7 +19,21 @@ public class SlicePizza3 {
 
     public static int solution(int slice, int n) {
 
-        int answer = 0;
+
+        int ori_slice = slice;
+        int answer;
+
+        if (slice >= n) {
+            answer = 1;
+        } else {
+            boolean check = true;
+            answer = 1;
+            while (check) {
+                slice += ori_slice;
+                answer++;
+                check = slice >= n ? false : true;
+            }
+        }
 
         return answer;
     }
