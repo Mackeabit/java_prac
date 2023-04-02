@@ -12,7 +12,7 @@ public class SbTest implements Runnable {
     }
 
     public void addChar() {
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 100; i++) {
             sb.append("1");
             sb.append("0");
         }
